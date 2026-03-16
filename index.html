@@ -61,6 +61,34 @@
             font-size: 12px;
             margin-top: 5px;
         }
+        /* 导航栏 */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            display: block;
+            padding: 15px 0;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav ul li a:hover {
+            color: #165DFF;
+        }
         /* 活动图片展示区 */
         .gallery-section {
             padding: 40px 0;
@@ -285,7 +313,20 @@
     </style>
 </head>
 <body>
-    <!-- 头部导航 -->
+    <!-- 导航栏 -->
+    <nav>
+      <div class="container">
+        <ul>
+          <li><a href="#intro">简介</a></li>
+          <li><a href="#gallery">活动集锦</a></li>
+          <li><a href="#courses">课程体系</a></li>
+          <li><a href="#services">服务领域</a></li>
+          <li><a href="#contact">联系我</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 头部banner -->
     <header>
         <div class="container header-content">
             <div class="title">
@@ -307,8 +348,8 @@
 
     <div class="container">
         <!-- 活动图片展示区 -->
-        <section class="gallery-section">
-            <h2>数字斌哥 活动风采</h2>
+        <section class="gallery-section" id="gallery">
+            <h2>数字斌哥集锦</h2>
             <div class="gallery-grid">
                 <div class="gallery-item"><img src="数字斌哥图片/001.png" alt="活动照片"></div>
                 <div class="gallery-item"><img src="数字斌哥图片/002.png" alt="活动照片"></div>
@@ -319,14 +360,11 @@
                 <div class="gallery-item"><img src="数字斌哥图片/007.png" alt="活动照片"></div>
                 <div class="gallery-item"><img src="数字斌哥图片/008.png" alt="活动照片"></div>
                 <div class="gallery-item"><img src="数字斌哥图片/009.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/010.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/01封面.png" alt="封面照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/02封面.png" alt="封面照片"></div>
             </div>
         </section>
 
         <!-- 核心介绍区 -->
-        <section class="intro-section">
+        <section class="intro-section" id="intro">
             <div class="section-title">
                 <i></i>
                 <h2>专家核心简介</h2>
@@ -377,7 +415,7 @@
         </section>
 
         <!-- 核心课程体系 -->
-        <section class="intro-section">
+        <section class="intro-section" id="courses">
             <div class="section-title">
                 <i></i>
                 <h2>核心教育培训课程体系</h2>
@@ -437,7 +475,7 @@
         </section>
 
         <!-- 核心服务领域 -->
-        <section class="intro-section">
+        <section class="intro-section" id="services">
             <div class="section-title">
                 <i></i>
                 <h2>核心服务与赋能领域</h2>
@@ -470,7 +508,7 @@
     </div>
 
     <!-- 底部信息 -->
-    <footer>
+    <footer id="contact">
         <div class="container footer-content">
             <div class="footer-left">
                 <p>数字斌哥 · 林江斌</p>
