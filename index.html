@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>林江斌 - 个人主页</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      font-weight: 300;
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+    nav {
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      display: block;
+      padding: 15px 0;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #3498db;
+    }
+    section {
+      padding: 80px 0;
+    }
+    section:nth-child(even) {
+      background-color: white;
+    }
+    h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+      font-weight: 300;
+    }
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+    .about-image img {
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .expertise-item {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .expertise-item h3 {
+      color: #3498db;
+      margin-bottom: 15px;
+    }
+    .experience-item {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #eee;
+    }
+    .experience-item:last-child {
+      border-bottom: none;
+    }
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .experience-header h3 {
+      color: #2c3e50;
+      margin: 0;
+    }
+    .experience-date {
+      color: #7f8c8d;
+      font-style: italic;
+    }
+    .experience-company {
+      color: #3498db;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    .course-list {
+      list-style: none;
+      padding: 0;
+    }
+    .course-list li {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .course-list li h3 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item h3 {
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+    }
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#expertise">专业技能</a></li>
+        <li><a href="#experience">工作经验</a></li>
+        <li><a href="#courses">课程体系</a></li>
+        <li><a href="#contact">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <div class="container">
+      <h1>林江斌</h1>
+      <p>企业级数字化转型专家 | 智能制造解决方案架构师</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>关于我</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>拥有20年企业级应用开发与管理经验，专注于离散制造行业数字化转型。曾主导多个大型智能制造项目，帮助企业实现生产效率提升和运营成本降低。</p>
+          <p>擅长企业架构设计、系统集成、数据分析和业务流程优化，对工业4.0、IoT、云计算等技术有深入研究。</p>
+          <p>致力于通过技术创新推动制造业数字化升级，为企业提供全方位的数字化解决方案。</p>
+        </div>
+        <div class="about-image">
+          <img src="https://via.placeholder.com/300" alt="林江斌">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="expertise">
+    <div class="container">
+      <h2>专业技能</h2>
+      <div class="expertise-grid">
+        <div class="expertise-item">
+          <h3>企业架构设计</h3>
+          <p>擅长设计可扩展、高可用的企业级应用架构，包括微服务架构、SOA等。</p>
+        </div>
+        <div class="expertise-item">
+          <h3>智能制造</h3>
+          <p>精通MES、ERP、PLM等系统集成，实现生产过程数字化管理。</p>
+        </div>
+        <div class="expertise-item">
+          <h3>数据分析</h3>
+          <p>利用大数据分析技术，为企业决策提供数据支持。</p>
+        </div>
+        <div class="expertise-item">
+          <h3>系统集成</h3>
+          <p>擅长企业内部系统与外部平台的集成，实现数据互通。</p>
+        </div>
+        <div class="expertise-item">
+          <h3>IoT技术</h3>
+          <p>熟悉工业物联网技术，实现设备互联和数据采集。</p>
+        </div>
+        <div class="expertise-item">
+          <h3>云计算</h3>
+          <p>了解主流云平台，能够设计基于云的企业解决方案。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <h2>工作经验</h2>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>智能制造解决方案架构师</h3>
+          <div class="experience-date">2020 - 至今</div>
+        </div>
+        <div class="experience-company">某知名智能制造公司</div>
+        <p>负责企业级智能制造解决方案的设计与实施，主导多个大型项目，帮助客户实现生产效率提升30%以上。</p>
+      </div>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>企业架构师</h3>
+          <div class="experience-date">2015 - 2020</div>
+        </div>
+        <div class="experience-company">某大型制造企业</div>
+        <p>负责企业IT架构规划与实施，推动企业数字化转型，实现业务流程优化和系统集成。</p>
+      </div>
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>技术总监</h3>
+          <div class="experience-date">2010 - 2015</div>
+        </div>
+        <div class="experience-company">某软件公司</div>
+        <p>领导技术团队开发企业级应用，负责技术架构设计和团队管理。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="container">
+      <h2>课程体系</h2>
+      <ul class="course-list">
+        <li>
+          <h3>智能制造系统架构设计</h3>
+          <p>介绍智能制造系统的架构设计原则和最佳实践，包括MES、ERP、PLM等系统的集成方案。</p>
+        </li>
+        <li>
+          <h3>工业物联网应用开发</h3>
+          <p>讲解工业物联网技术在制造业中的应用，包括设备互联、数据采集和分析。</p>
+        </li>
+        <li>
+          <h3>企业数字化转型策略</h3>
+          <p>分享企业数字化转型的战略规划和实施步骤，帮助企业制定适合自身的数字化转型路线图。</p>
+        </li>
+        <li>
+          <h3>大数据分析在制造业中的应用</h3>
+          <p>介绍如何利用大数据分析技术优化生产过程，提高生产效率和产品质量。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>联系方式</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <h3>邮箱</h3>
+          <p>linjiangbin@example.com</p>
+        </div>
+        <div class="contact-item">
+          <h3>电话</h3>
+          <p>138****1234</p>
+        </div>
+        <div class="contact-item">
+          <h3>微信</h3>
+          <p>linjiangbin_wx</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 林江斌个人主页. 保留所有权利.</p>
+    </div>
+  </footer>
+</body>
+</html>
+  
