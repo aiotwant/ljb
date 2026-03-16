@@ -147,6 +147,13 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       margin-bottom: 20px;
     }
+    .course-list .featured-course {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+    .course-list .featured-course h3 {
+      color: #fff;
+    }
     .course-list li h3 {
       color: #2c3e50;
       margin-top: 0;
@@ -162,6 +169,70 @@
     }
     .contact-item h3 {
       color: #3498db;
+      margin-bottom: 10px;
+    }
+    .weixin-content {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .weixin-content h3 {
+      color: #2c3e50;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .weixin-qrcode {
+      margin: 30px 0;
+    }
+    .weixin-qrcode img {
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .weixin-button {
+      display: inline-block;
+      background: #07c160;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+    .weixin-button:hover {
+      background: #06ae56;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .project-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .project-image img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .project-info {
+      padding: 20px;
+    }
+    .project-info h3 {
+      color: #2c3e50;
+      margin-top: 0;
       margin-bottom: 10px;
     }
     footer {
@@ -194,7 +265,9 @@
         <li><a href="#about">关于我</a></li>
         <li><a href="#expertise">专业技能</a></li>
         <li><a href="#experience">工作经验</a></li>
+        <li><a href="#projects">代表项目</a></li>
         <li><a href="#courses">课程体系</a></li>
+        <li><a href="#weixin">视频号</a></li>
         <li><a href="#contact">联系方式</a></li>
       </ul>
     </div>
@@ -289,6 +362,10 @@
     <div class="container">
       <h2>课程体系</h2>
       <ul class="course-list">
+        <li class="featured-course">
+          <h3>⭐ 人工智能在制造业中的应用</h3>
+          <p>讲解如何将AI技术应用于制造业，包括生产预测、质量检测、缺陷识别、预测性维护等实际场景，结合大量工业案例帮助学员快速掌握AI落地方法。</p>
+        </li>
         <li>
           <h3>智能制造系统架构设计</h3>
           <p>介绍智能制造系统的架构设计原则和最佳实践，包括MES、ERP、PLM等系统的集成方案。</p>
@@ -306,6 +383,60 @@
           <p>介绍如何利用大数据分析技术优化生产过程，提高生产效率和产品质量。</p>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>代表项目</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250?text=智能制造+MES系统实施" alt="智能制造MES项目">
+          </div>
+          <div class="project-info">
+            <h3>大型离散制造企业MES系统实施</h3>
+            <p>主导亿级MES项目整体规划与实施，实现生产过程全数字化管控，生产效率提升35%。</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250?text=工业物联网+设备联网" alt="工业物联网项目">
+          </div>
+          <div class="project-info">
+            <h3>车间设备联网与数据采集项目</h3>
+            <p>实现百余台设备联网数据采集，实时监控设备运行状态，设备OEE提升15%。</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://via.placeholder.com/400x250?text=AI+质量检测" alt="AI质量检测项目">
+          </div>
+          <div class="project-info">
+            <h3>基于AI的产品质量缺陷检测</h3>
+            <p>运用计算机视觉技术实现产品外观缺陷自动检测，检测准确率达99%以上。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="weixin">
+    <div class="container">
+      <h2>微信视频号</h2>
+      <div class="weixin-content">
+        <div class="weixin-info">
+          <h3>数字斌哥</h3>
+          <p>专注于制造业数字化转型科普，分享智能制造实战经验、AI应用案例、行业洞察。欢迎关注交流！</p>
+          <div class="weixin-qrcode">
+            <p>扫码关注视频号：<strong>数字斌哥</strong></p>
+            <img src="https://via.placeholder.com/200x200?text=数字斌哥%0A视频号二维码" alt="数字斌哥 微信视频号二维码">
+          </div>
+          <div class="weixin-link">
+            <a href="#" class="weixin-button">搜索微信号：iotwant 关注</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
