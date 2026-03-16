@@ -61,8 +61,8 @@
             font-size: 12px;
             margin-top: 5px;
         }
-        /* 活动图片展示区 */
-        .gallery-section {
+        /* 视频形象区 */
+        .video-section {
             padding: 40px 0;
             text-align: center;
             background-color: #fff;
@@ -70,14 +70,14 @@
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
         }
-        .gallery-section h2 {
+        .video-section h2 {
             font-size: 24px;
             color: #165DFF;
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
         }
-        .gallery-section h2::after {
+        .video-section h2::after {
             content: "";
             width: 60px;
             height: 3px;
@@ -87,21 +87,18 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .gallery-item img {
+        .video-box {
             width: 100%;
-            height: auto;
+            max-width: 800px;
+            height: 450px;
+            background-color: #f0f2f5;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery-item img:hover {
-            transform: scale(1.02);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            border: 1px dashed #ddd;
         }
         /* 核心介绍区 */
         .intro-section {
@@ -182,10 +179,6 @@
             box-shadow: 0 10px 20px rgba(22, 93, 255, 0.1);
             border-color: #165DFF;
         }
-        .course-card.featured {
-            border: 2px solid #165DFF;
-            background: linear-gradient(135deg, rgba(22, 93, 255, 0.05) 0%, rgba(22, 93, 255, 0.01) 100%);
-        }
         .course-card h4 {
             font-size: 18px;
             color: #165DFF;
@@ -250,6 +243,9 @@
             .qrcode-header {
                 margin-top: 20px;
             }
+            .video-box {
+                height: 300px;
+            }
             .footer-content {
                 justify-content: center;
                 text-align: center;
@@ -259,9 +255,6 @@
             }
             .course-grid {
                 grid-template-columns: 1fr;
-            }
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
             }
         }
         @media (max-width: 480px) {
@@ -278,9 +271,6 @@
                 width: 60px;
                 height: 60px;
             }
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -294,11 +284,11 @@
             </div>
             <div class="qrcode-header">
                 <div class="qrcode-item">
-                    <img src="数字斌哥图片/02二维码-小程序-数字斌哥.png" alt="数字斌哥微信小程序">
+                    <img src="./数字斌哥微信小程序二维码.png" alt="数字斌哥微信小程序">
                     <p>微信小程序</p>
                 </div>
                 <div class="qrcode-item">
-                    <img src="数字斌哥图片/01二维码-微信-林江斌.png" alt="数字斌哥微信">
+                    <img src="./数字斌哥个人二维码.png" alt="数字斌哥微信">
                     <p>微信咨询</p>
                 </div>
             </div>
@@ -306,22 +296,12 @@
     </header>
 
     <div class="container">
-        <!-- 活动图片展示区 -->
-        <section class="gallery-section">
-            <h2>数字斌哥 活动风采</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="数字斌哥图片/001.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/002.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/003.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/004.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/005.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/006.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/007.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/008.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/009.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/010.png" alt="活动照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/01封面.png" alt="封面照片"></div>
-                <div class="gallery-item"><img src="数字斌哥图片/02封面.png" alt="封面照片"></div>
+        <!-- 视频号形象区 -->
+        <section class="video-section">
+            <h2>数字斌哥 视频号形象</h2>
+            <div class="video-box">
+                <!-- 嵌入微信视频号播放窗口，替换为实际视频号链接即可 -->
+                <p>微信视频号内容嵌入区<br>可添加视频号播放代码/封面图</p>
             </div>
         </section>
 
@@ -385,8 +365,8 @@
             <div class="course-section">
                 <div class="course-grid">
                     <!-- 青少年AI系列 -->
-                    <div class="course-card featured">
-                        <h4>⭐ 青少年AI能力培养系列</h4>
+                    <div class="course-card">
+                        <h4>青少年AI能力培养系列</h4>
                         <ul>
                             <li>你眼中的AI与战争和平</li>
                             <li>具身智能来啦</li>
@@ -402,10 +382,10 @@
                         <ul>
                             <li>AI新思维、新应用、新机遇——企业AI应用实战</li>
                             <li>5G+物联网数字化转型落地实训</li>
-                            <li>工业互联网数字化转型实战</li>
+                            <li>工业互联网数字化转型6破实战</li>
                             <li>智慧教育数字化转型新模式实训</li>
                             <li>智慧农业+数字乡村三农数字化转型实战</li>
-                            <li>金融科技数字化转型特训</li>
+                            <li>金融科技数字化转型6破特训</li>
                         </ul>
                     </div>
                     <!-- 数字化创新生态系列 -->
@@ -479,11 +459,11 @@
             </div>
             <div class="footer-right">
                 <div class="footer-qrcode">
-                    <img src="数字斌哥图片/02二维码-小程序-数字斌哥.png" alt="数字斌哥微信小程序">
+                    <img src="./数字斌哥微信小程序二维码.png" alt="数字斌哥微信小程序">
                     <p>微信小程序</p>
                 </div>
                 <div class="footer-qrcode">
-                    <img src="数字斌哥图片/01二维码-微信-林江斌.png" alt="数字斌哥微信">
+                    <img src="./数字斌哥个人二维码.png" alt="数字斌哥微信">
                     <p>扫码添加微信咨询</p>
                 </div>
             </div>
@@ -491,7 +471,7 @@
     </footer>
 
     <script>
-        // 添加简单的页面滚动效果
+        // 可选：添加简单的页面滚动效果
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
